@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>lesson2.5</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        /*
+        Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+        где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+        переданного значения операции (использовать switch) выполнить одну из арифметических
+        операций
+        (использовать функции из задания 4) и вернуть полученное значение.
+        */
+
+        function sum(a, b) {
+            return (a + b);
+        }
+
+        function min(a, b) {
+            return (a - b);
+        }
+
+        function div(a, b) {
+            return (a / b);
+        }
+
+        function mult(a, b) {
+            return (a * b);
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case 'sum':
+                    return sum(arg1, arg2);
+                case 'min':
+                    return min(arg1, arg2);
+                case 'div':
+                    return div(arg1, arg2)
+                case 'mult':
+                    return mult(arg1, arg2)
+            }
+        }
+
+        let arg1 = +prompt('Введите первое число');
+        let arg2 = +prompt('Введите второе число');
+        let operation = prompt('Выберите одно из действий: sum (+), min (-), div (/), mult (*).');
+        let result = mathOperation(arg1, arg2, operation);
+        alert(result);
+    </script>
+</body></html>
