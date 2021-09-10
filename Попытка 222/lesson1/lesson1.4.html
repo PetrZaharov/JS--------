@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>lesson1.4</title>
+</head>
+<body>
+   <script>
+      'use strict';
+
+      /*
+      Чему будет равно JS-выражение 1000 + "108"
+      */
+      
+      let sum = 1000 + '100';
+      alert(sum);
+      alert(typeof(sum));
+
+      /*
+      После того как мы используем команду typeof сразу становиться понятно почему у нас получается такой 
+      странный результат, дело в том, что мы получаем строковый тип данных, а значит мы наблюдаем 
+      контаценацию строк, то есть 1000 и тип данных number становиться типом данных string и эти числа просто 
+      склеиваютсяб давая нам в результате 1000100.
+      */
+   </script>
+</body>
+</html>

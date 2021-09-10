@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>lesson1.1</title>
+</head>
+<body>
+   <script>
+      'use strict';
+
+      /*
+      Задать температуру в градусах по Цельсию. Вывести в alert соответствующую температуру в градусах по 
+      Фаренгейту. Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, 
+      Tc – температура по Цельсию
+      */
+
+      let start = confirm('Хотите узнать сколько градусов по Фарентгейту в градусах Цельсия?');
+
+      if(start == true){   
+         run();
+      } else {
+         alert('Ну что же в другой раз.')
+      }
+      
+      /**Функция конвертации градусов Цельсия в Фарентгейты
+       * @param {number} Tc - присваивает значение градусов Цельсия.
+       * @param {number} Tf - конвертирует градусы Цельсия в Фарентгейты.
+       */
+      function run(){
+         const Tc = +prompt('Введите значение температуры в Цельсиях');
+         if(isNaN(Tc)){
+            alert('Значения надо писать числами');
+            run();
+            } else {
+               const Tf = (9/5)*Tc + 32;
+               alert(`${Tc} по Цельсию, это ${Tf.toFixed(2)} по Фарентгейту`);
+               let repeat = confirm('Хотите ввести другое значение?');
+               if(repeat == true){
+               run();
+            } else {
+               alert('До свидания');
+            }
+         }
+      }
+   </script>
+</body>
+</html>
